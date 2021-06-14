@@ -1,3 +1,41 @@
+@font-face {
+    font-family: "Gilroy";
+    src: url(../fonts/gilroy-bold.ttf);
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: "Gilroy";
+    src: url(../fonts/gilroy-semibold.ttf);
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: "Gilroy";
+    src: url(../fonts/gilroy-regular.ttf);
+    font-weight: 400;
+}
+
+body {
+    font-family: "Gilroy";
+    /* margin: 0; */
+}
+
+/* button {
+    padding: 0;
+    border: 0;
+} */
+
+/* ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+} */
+
+/* a {
+    text-decoration: none;
+} */
+
 .header .wrapper-top {
     background: #20242D;
 }
@@ -81,5 +119,55 @@
 
 .start-screen .btn-scroll {
     background: rgba(123, 126, 133, 0.4);
-    
+}
+
+.main-info {
+    background: #FFFFFF;
+}
+
+.main-info .title{
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 47px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #20242D;
+}
+
+.main-info .content p {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #20242D;
+}
+
+.footer {
+    background: #20242D;
+}
+
+.footer .navigation a{
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 17px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.footer .navigation .active {
+    color: #FF7129;
+}
+
+.footer .wrapper-bottom .privace {
+    color:#7B7E85;
+}
+
+.footer .wrapper-bottom .secur-data {
+    color:#7B7E85;
 }
