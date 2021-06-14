@@ -171,3 +171,7 @@ body {
 .footer .wrapper-bottom .secur-data {
     color:#7B7E85;
 }
+
+.pop-up {
+    display: none;
+}
