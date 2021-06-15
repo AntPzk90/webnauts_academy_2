@@ -18,26 +18,42 @@
 
 body {
     font-family: "Gilroy";
-    /* margin: 0; */
+    margin: 0;
 }
 
-/* button {
+button {
     padding: 0;
     border: 0;
-} */
+}
 
-/* ul {
+ul {
     padding: 0;
     margin: 0;
     list-style: none;
-} */
+}
 
-/* a {
+a {
     text-decoration: none;
-} */
+}
+
+.container {
+    width: 1600px;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-left: auto;
+    margin-right: auto;
+}
 
 .header .wrapper-top {
     background: #20242D;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.header .wrapper-top .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .header .address {
@@ -48,6 +64,19 @@ body {
     letter-spacing: 0em;
     text-align: left;
     color:  #FFFFFF;
+}
+
+.header .contacts {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header .contacts li{
+    margin-right: 56px;
+}
+
+.header .contacts li:last-child {
+    margin-right: 0;
 }
 
 .header .contacts a {
@@ -63,6 +92,27 @@ body {
 
 .header .wrapper-bottom {
     background: #FFFFFF;
+    padding-top: 12px;
+    padding-bottom: 11px;
+}
+
+.header .wrapper-bottom .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header .navigation ul{
+    display: flex;
+    align-items: center;
+}
+
+.header .navigation li {
+    margin-right: 56px;
+}
+
+.header .navigation li:last-child {
+    margin-right: 0;
 }
 
 .header .navigation a{
@@ -81,8 +131,13 @@ body {
 }
 
 .start-screen {
-    /* для тестировки */
     background: #777;
+    background-image: url("../img/main-bg.jpg");
+    padding-top: 270px;
+    padding-bottom: 138px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position:  50%;
 }
 
 .start-screen .main-title {
@@ -93,6 +148,8 @@ body {
     letter-spacing: 0em;
     text-align: center;
     color: #FFFFFF;
+    margin-top: 0;
+    margin-bottom: 16px;
 }
 
 .start-screen .slogan {
@@ -103,6 +160,10 @@ body {
     letter-spacing: 0em;
     text-align: center;
     color: #FFFFFF;
+    max-width: 508px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 59px;
 }
 
 .start-screen .btn {
@@ -115,10 +176,22 @@ body {
     letter-spacing: 0em;
     text-align: center;
     color: #FFFFFF;
+    display: block;
+    width: 188px;
+    padding: 16px 45px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 106px;
 }
 
 .start-screen .btn-scroll {
     background: rgba(123, 126, 133, 0.4);
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .main-info {
