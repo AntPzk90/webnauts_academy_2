@@ -1,2 +1,1 @@
-# webnauts_academy_2
- new project
+https://antpzk90.github.io/webnauts_academy_2/
