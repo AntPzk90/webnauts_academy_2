@@ -81,6 +81,9 @@
     <main>
         <section class="start-screen">
             <div class="container">
+                <span class="decor-word">
+                    Solar
+                </span>
                 <h1 class="main-title">
                     Panele Fotowoltaiczne
                 </h1>
@@ -167,15 +170,33 @@
                 <a href="#" class="secur-data">Ochrona danych osobowych</a>
             </div>
             <div class="pop-up">
-                <button>close</button>
+                <button class="pop-up-close">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path
+                            d="M12 10.586L16.95 5.63599L18.364 7.04999L13.414 12L18.364 16.95L16.95 18.364L12 13.414L7.04999 18.364L5.63599 16.95L10.586 12L5.63599 7.04999L7.04999 5.63599L12 10.586Z"
+                            fill="#20242d" />
+                    </svg>
+                </button>
+                <b class="pop-up-title">
+                    Jakieś pytania?
+                </b>
+                <p class="pop-up-dscr">
+                    Zostaw swoje dane, a nasz menedżer skontaktuje się z Tobą, aby odpowiedzieć na Twoje pytania
+                </p>
                 <form method="GET" action="#">
-                    <label for="name">
-                        name
+                    <label>
+                        Twoje imię
+                        <input type="text" name="user" placeholder="Wprowadź swoje imię" id="name">
                     </label>
-                    <input type="text" name="user" placeholder="Wprowadź swoje imię" id="name">
-                    <input type="email" name="email">
-                    <input type="tel" name="phone">
-                    <button type="submit"> send</button>
+                    <label>
+                        E-mail
+                        <input type="email" name="email" placeholder="Wprowadź mail" id="email">
+                    </label>
+                    <label>
+                        Telefon
+                        <input type="tel" name="phone" placeholder="Wprowadź telefon" id="tel">
+                    </label>
+                    <button type="submit" class="btn pop-up-btn">Wysłać prośbę</button>
                 </form>
             </div>
         </div>
