@@ -59,12 +59,20 @@ a {
 }
 
 .container {
-  width: 1600px;
+  width: 100%;
+  max-width: 1600px;
   padding-left: 50px;
   padding-right: 50px;
   margin-left: auto;
   margin-right: auto;
   box-sizing: border-box;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 1;
 }
 
 .header .wrapper-top {
@@ -95,7 +103,15 @@ a {
 }
 
 .header .contacts li {
+  position: relative;
   margin-right: 56px;
+  padding-left: 22px;
+}
+
+.header .contacts svg {
+  position: absolute;
+  top: 4px;
+  left: 0px;
 }
 
 .header .contacts li:last-child {
@@ -150,17 +166,45 @@ a {
 }
 
 .header .navigation .active {
+  position: relative;
   color: #ff7129;
 }
 
+.header .navigation .active::before {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 10px;
+  height: 1px;
+  background-color:  #ff7129;
+  top: 9px;
+  left: -15px;
+}
+
+.header .navigation .active::after {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 10px;
+  height: 1px;
+  background-color:  #ff7129;
+  top: 9px;
+  right: -15px;
+}
+
 .start-screen {
+  position: relative;
   background: #777;
   background-image: url("../img/main-bg.jpg");
-  padding-top: 270px;
-  padding-bottom: 138px;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50%;
+}
+
+.start-screen .container {
+  position: relative;
+  padding-top: 270px;
+  padding-bottom: 138px;
 }
 
 .start-screen .main-title {
@@ -205,6 +249,36 @@ a {
   margin-right: auto;
 }
 
+.start-screen .decor-word {
+  position: absolute;
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.3);
+  font-size: 120px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 145px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: transparent;
+  text-transform: uppercase;
+  top: 163px;
+  left: 50px;
+}
+
+.start-screen .decor-word-2 {
+  position: absolute;
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.3);
+  font-size: 120px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 145px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: transparent;
+  text-transform: uppercase;
+  right: 50px;
+  bottom: 282px;
+}
+
 .main-info {
   background: #ffffff;
   padding-top: 132px;
@@ -236,13 +310,42 @@ a {
 }
 
 .main-info .content {
+  position: relative;
   width: 535px;
   padding-top: 69px;
 }
 
+.main-info .content .decor-word {
+  position: absolute;
+  -webkit-text-stroke: 1px rgba(32, 36, 45, 0.1);
+  font-size: 120px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 145px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: transparent;
+  text-transform: uppercase;
+  top: -26px;
+  left: -28px;
+}
+
 .main-info .title {
+  position: relative;
   margin-top: 0;
   margin-bottom: 64px;
+  padding-left: 16px;
+}
+
+.main-info .title::before {
+  position: absolute;
+  content: "";
+  display: block;
+  height: 52px;
+  width: 1px;
+  background-color:  #ff7129;
+  top: 0;
+  left: 0;
 }
 
 .main-info .content p {
@@ -322,6 +425,92 @@ a {
   letter-spacing: 0em;
 }
 
-/* .pop-up {
+.pop-up {
   display: none;
-} */
+  position: fixed;
+  width: 800px;
+  background-color: #ffffff;
+  box-sizing: border-box;
+  padding-top: 72px;
+  padding-right: 58px;
+  padding-bottom: 51px;
+  padding-left: 58px;
+  top: 50%;
+  left: 50%;
+  /* margin-left: -400px;
+  margin-top: -244px; */
+  transform: translate(-50%, -50%);
+}
+
+.pop-up .pop-up-close {
+  position: absolute;
+  background-color: transparent;
+  top: 22px;
+  right: 22px;
+}
+
+.pop-up .pop-up-title {
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 44px;
+  letter-spacing: 0em;
+  text-align: left;
+  display: block;
+  margin-bottom: 16px;
+}
+
+.pop-up .pop-up-dscr {
+  margin-bottom: 56px;
+}
+
+.pop-up form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.pop-up form label {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 16px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #7b7e85;
+  margin-bottom: 24px;
+}
+
+.pop-up form input {
+  display: block;
+  border: 1px solid #e0e0e0;
+  padding: 16px 24px;
+  margin-top: 12px;
+  font-family: inherit;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 19px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #20242d;
+  min-width: 327px;
+  box-sizing: border-box;
+}
+
+.pop-up form input::placeholder {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 19px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #7b7e85;
+}
+
+.pop-up form .pop-up-btn {
+  padding-left: 30px;
+  padding-right: 30px;
+  margin-top: 28px;
+}
