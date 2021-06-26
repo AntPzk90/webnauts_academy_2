@@ -49,6 +49,11 @@ a {
   display: block;
   width: 188px;
   padding: 16px 45px;
+  transition: all ease 1s;
+}
+
+.btn:hover {
+ opacity: 0.8;
 }
 
 .btn-dark {
@@ -66,13 +71,6 @@ a {
   margin-left: auto;
   margin-right: auto;
   box-sizing: border-box;
-}
-
-.header {
-  position: sticky;
-  top: 0;
-  left: 0;
-  z-index: 1;
 }
 
 .header .wrapper-top {
@@ -108,14 +106,14 @@ a {
   padding-left: 22px;
 }
 
+.header .contacts li:last-child {
+  margin-right: 0;
+}
+
 .header .contacts svg {
   position: absolute;
   top: 4px;
-  left: 0px;
-}
-
-.header .contacts li:last-child {
-  margin-right: 0;
+  left: 0;
 }
 
 .header .contacts a {
@@ -166,34 +164,33 @@ a {
 }
 
 .header .navigation .active {
-  position: relative;
   color: #ff7129;
+  position: relative;
 }
 
 .header .navigation .active::before {
   position: absolute;
+  top: 9px;
+  left: -22px;
   content: "";
   display: block;
   width: 10px;
   height: 1px;
-  background-color:  #ff7129;
-  top: 9px;
-  left: -15px;
+  background-color: #ff7129;
 }
 
 .header .navigation .active::after {
   position: absolute;
+  top: 9px;
+  right: -22px;
   content: "";
   display: block;
   width: 10px;
   height: 1px;
-  background-color:  #ff7129;
-  top: 9px;
-  right: -15px;
+  background-color: #ff7129;
 }
 
 .start-screen {
-  position: relative;
   background: #777;
   background-image: url("../img/main-bg.jpg");
   background-size: cover;
@@ -251,6 +248,8 @@ a {
 
 .start-screen .decor-word {
   position: absolute;
+  left: 50px;
+  top: 163px;
   -webkit-text-stroke: 1px rgba(255, 255, 255, 0.3);
   font-size: 120px;
   font-style: normal;
@@ -260,12 +259,12 @@ a {
   text-align: left;
   color: transparent;
   text-transform: uppercase;
-  top: 163px;
-  left: 50px;
 }
 
 .start-screen .decor-word-2 {
   position: absolute;
+  right: 50px;
+  bottom: 282px;
   -webkit-text-stroke: 1px rgba(255, 255, 255, 0.3);
   font-size: 120px;
   font-style: normal;
@@ -275,8 +274,6 @@ a {
   text-align: left;
   color: transparent;
   text-transform: uppercase;
-  right: 50px;
-  bottom: 282px;
 }
 
 .main-info {
@@ -290,6 +287,8 @@ a {
 }
 
 .main-info .container {
+  padding-top: 132px;
+  padding-bottom: 115px;
   display: flex;
   padding-left: 200px;
   padding-right: 200px;
@@ -315,9 +314,11 @@ a {
   padding-top: 69px;
 }
 
-.main-info .content .decor-word {
+.main-info .decor-word {
   position: absolute;
-  -webkit-text-stroke: 1px rgba(32, 36, 45, 0.1);
+  top: 0px;
+  left: -28px;
+  -webkit-text-stroke: 1px rgba(32, 36, 45, 0.3);
   font-size: 120px;
   font-style: normal;
   font-weight: 700;
@@ -326,8 +327,6 @@ a {
   text-align: left;
   color: transparent;
   text-transform: uppercase;
-  top: -26px;
-  left: -28px;
 }
 
 .main-info .title {
@@ -339,13 +338,13 @@ a {
 
 .main-info .title::before {
   position: absolute;
-  content: "";
-  display: block;
-  height: 52px;
-  width: 1px;
-  background-color:  #ff7129;
   top: 0;
   left: 0;
+  content: "";
+  display: block;
+  width: 1px;
+  height: 52px;
+  background-color: #ff7129;
 }
 
 .main-info .content p {
@@ -399,6 +398,10 @@ a {
   margin-right: 0px;
 }
 
+.footer .navigation .active {
+  color: #ff7129;
+}
+
 .footer .wrapper-bottom {
   display: flex;
   justify-content: space-between;
@@ -428,6 +431,9 @@ a {
 .pop-up {
   display: none;
   position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   width: 800px;
   background-color: #ffffff;
   box-sizing: border-box;
@@ -435,18 +441,32 @@ a {
   padding-right: 58px;
   padding-bottom: 51px;
   padding-left: 58px;
-  top: 50%;
-  left: 50%;
-  /* margin-left: -400px;
-  margin-top: -244px; */
-  transform: translate(-50%, -50%);
 }
+
+@keyframes fadeIn {
+  0% {
+    transform: translate(-50%, -2000px);
+  }
+  50% {
+    transform: translate(-50%, 0%);
+  }
+  100% {
+    transform: translate(-50%, -50%);
+  }
+}
+
+
+.pop-up-show {
+  display: block;
+  animation-name: fadeIn;
+  animation-duration: 3s;
+}  
 
 .pop-up .pop-up-close {
   position: absolute;
-  background-color: transparent;
   top: 22px;
   right: 22px;
+  background-color: transparent;
 }
 
 .pop-up .pop-up-title {
