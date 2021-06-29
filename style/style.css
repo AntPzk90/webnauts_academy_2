@@ -53,7 +53,7 @@ a {
 }
 
 .btn:hover {
- opacity: 0.8;
+  opacity: 0.8;
 }
 
 .btn-dark {
@@ -455,13 +455,11 @@ a {
   }
 }
 
-
 .pop-up-show {
   display: block;
   animation-name: fadeIn;
-  animation-duration: 1s;
+  animation-duration: 3s;
 }
-
 
 .pop-up .pop-up-close {
   position: absolute;
@@ -581,5 +579,78 @@ a {
   text-transform: uppercase;
 }
 
-.gallery-list {
+.swiper-slide {
+  opacity: 0.5;
+}
+
+.swiper-slide img {
+  width: 100%;
+}
+
+.swiper-slide-active {
+  width: 64.3% !important;
+  margin: 0 160px;
+  opacity: 1;
+}
+
+.swiper-button-prev {
+  left: 11%;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #ff7129;
+  box-shadow: 0px 4px 28px rgba(255, 113, 41, 0.29);
+}
+
+.swiper-button-prev::after {
+  content: "";
+  display: block;
+  width: 32px;
+  height: 32px;
+  background-image: url("../img/arrow-left-icon.svg");
+  background-size: cover;
+  background-position: 50%;
+  background-repeat: no-repeat;
+}
+
+.swiper-button-next::after {
+  content: "";
+  display: block;
+  width: 32px;
+  height: 32px;
+  background-image: url("../img/arrow-right-icon.svg");
+  background-size: cover;
+  background-position: 50%;
+  background-repeat: no-repeat;
+}
+
+.swiper-button-next {
+  right: 11%;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #ff7129;
+  box-shadow: 0px 4px 28px rgba(255, 113, 41, 0.29);
+}
+
+.swiper-container {
+  padding-bottom: 54px;
+}
+
+.swiper-pagination {
+  bottom: 0;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0em;
+  color: #7b7e85;
+}
+
+.swiper-pagination-current {
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px;
+  color: #000000;
 }
