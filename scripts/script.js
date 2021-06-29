@@ -11,6 +11,10 @@ function closePopUpOnClick() {
   popUp.classList.remove("pop-up-show");
 }
 
+function closePopUpOnClick() {
+    popUp.classList.remove("pop-up-show");
+}
+
 popUpBtn.addEventListener("click", showPopUpOnClick);
 footerBtn.addEventListener("click", showPopUpOnClick);
 popUpClose.addEventListener("click", closePopUpOnClick);

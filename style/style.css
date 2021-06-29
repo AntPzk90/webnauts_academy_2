@@ -49,6 +49,11 @@ a {
   display: block;
   width: 188px;
   padding: 16px 45px;
+  transition: all ease 1s;
+}
+
+.btn:hover {
+ opacity: 0.8;
 }
 
 .btn-dark {
@@ -450,11 +455,13 @@ a {
   }
 }
 
+
 .pop-up-show {
   display: block;
   animation-name: fadeIn;
   animation-duration: 1s;
 }
+
 
 .pop-up .pop-up-close {
   position: absolute;
