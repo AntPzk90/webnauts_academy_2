@@ -15,6 +15,8 @@
 // footerBtn.addEventListener("click", showPopUpOnClick);
 // popUpClose.addEventListener("click", closePopUpOnClick);
 
+//swiper
+
 let swiper = new Swiper(".swiper-container", {
   slidesPerView: 1.2,
   centeredSlides: true,
